@@ -148,7 +148,7 @@ export default class MyPlugin extends Plugin {
 		let footnoteDetail = `[^${footNoteId}]: `;
 
 		if (lastLine.length > 0) {
-			doc.replaceRange("\n" + footnoteDetail, {line: doc.lineCount(), ch: 0})
+			doc.replaceRange("\n\n" + footnoteDetail, {line: doc.lineCount(), ch: 0})
 		} else {
 			doc.replaceRange(footnoteDetail, {line: doc.lineCount(), ch: 0})
 		}
